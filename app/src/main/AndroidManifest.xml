@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        <package android:name="com.ss.android.ugc.aweme" />
+        <package android:name="com.ss.android.ugc.aweme.lite" />
+        <package android:name="com.zhiliaoapp.musically" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CET4Cards">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LibraryActivity"
+            android:exported="false"
+            android:label="@string/library" />
+
+        <activity
+            android:name=".AppPickerActivity"
+            android:exported="false"
+            android:label="@string/apps_title" />
+
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_title" />
+
+        <activity
+            android:name=".UserNoticeActivity"
+            android:exported="false"
+            android:label="@string/notice_title" />
+
+        <activity
+            android:name=".StatsActivity"
+            android:exported="false"
+            android:label="@string/stats_title" />
+
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:label="@string/history_title" />
+
+        <activity
+            android:name=".OverlayStyleActivity"
+            android:exported="false"
+            android:label="@string/style_title" />
+
+        <service
+            android:name=".MonitorService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="User-requested study reminder while using short video apps" />
+        </service>
+
+        <receiver
+            android:name=".WordActionReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="false" />
+
+        <service
+            android:name=".WordAccessibility"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service" />
+        </service>
+
+    </application>
+
+</manifest>

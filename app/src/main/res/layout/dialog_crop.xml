@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="4dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="4dp">
+
+    <View
+        android:id="@+id/vCrop"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+
+    <TextView
+        android:id="@+id/tvCropVal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/text_sub"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/crop_scale"
+        android:textColor="@color/text"
+        android:textSize="13sp" />
+
+    <SeekBar
+        android:id="@+id/sbCropScale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/crop_x"
+        android:textColor="@color/text"
+        android:textSize="13sp" />
+
+    <SeekBar
+        android:id="@+id/sbCropX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/crop_y"
+        android:textColor="@color/text"
+        android:textSize="13sp" />
+
+    <SeekBar
+        android:id="@+id/sbCropY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/crop_hint"
+        android:textColor="@color/text_sub"
+        android:textSize="12sp" />
+</LinearLayout>

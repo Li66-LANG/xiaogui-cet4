@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">小龟过四级</string>
+
+    <!-- 通知 -->
+    <string name="ch_word">单词提醒</string>
+    <string name="ch_word_desc">用手机时弹出的单词通知</string>
+    <string name="ch_service">后台监控</string>
+    <string name="ch_service_desc">保持监控服务运行的常驻通知</string>
+    <string name="act_know">记住了</string>
+    <string name="act_unknown">还不认识</string>
+    <string name="act_close">关闭</string>
+    <string name="act_stop">停止</string>
+    <string name="subtext_fmt">今日第 %1$d 个</string>
+    <string name="toast_know">记住了，再连续记 3 次就掌握</string>
+    <string name="toast_unknown">已加入「我的生词」</string>
+    <string name="toast_mastered">连续 3 次记住，已标记为已掌握</string>
+    <string name="toast_unknown_mine">还不认识，已加入「我的生词」</string>
+    <string name="toast_unknown_review">还不认识，已放入「待巩固」</string>
+
+    <string name="svc_title">单词提醒运行中</string>
+    <string name="svc_waiting">等待你打开监控的应用</string>
+    <string name="svc_waiting_desc">等待打开监控的应用 · 打开后开始计时</string>
+    <string name="svc_active_fmt">监控应用在前台 · 本次已提醒 %1$d 次</string>
+
+    <!-- 首页 -->
+    <string name="main_title">龟龟陪你背单词</string>
+    <string name="main_sub_fmt">用手机时，龟龟每 %1$d 分钟陪你记一个词</string>
+    <string name="switch_title">让龟龟开始看着你</string>
+    <string name="switch_on">龟龟在看 · 关闭点这里</string>
+    <string name="switch_off">龟龟在打盹</string>
+
+    <string name="perm_title">需要的权限</string>
+    <string name="perm_notif">通知权限（必开）</string>
+    <string name="perm_usage">使用情况访问（必开）</string>
+    <string name="perm_battery">忽略电池优化（必开）</string>
+    <string name="perm_overlay">悬浮窗（可选）</string>
+    <string name="perm_alarm">精确闹钟（可选）</string>
+    <string name="perm_acc">无障碍强弹窗（可选）</string>
+    <string name="acc_desc">只用于在用手机时把单词卡片浮到屏幕上层。不读取屏幕内容、不监听你的操作。</string>
+    <string name="acc_manual">请到 设置 → 快捷与辅助 → 无障碍 里手动找到本应用并开启</string>
+    <string name="overlay_switch">悬浮窗弹出</string>
+    <string name="overlay_hint">国产系统默认不让后台应用弹出通知横幅，通知会静静躺在通知栏里。开了悬浮窗才会真正浮在这些应用上面。</string>
+    <string name="state_on">已允许</string>
+    <string name="state_off">未允许</string>
+    <string name="btn_go">去开启</string>
+
+    <string name="interval_title">提醒间隔</string>
+    <string name="chip_1">1 分钟</string>
+    <string name="chip_3">3 分钟</string>
+    <string name="chip_5">5 分钟</string>
+    <string name="chip_10">10 分钟</string>
+    <string name="interval_hint">进入监控应用才开始计时，离开立即停止，重新进入重新计时。</string>
+
+    <string name="source_title">复习词书</string>
+    <string name="source_hint">连续 3 次「记住了」才算掌握；任意一次「还不认识」会重新计数。每 3 条弹窗内不重复同一个词。</string>
+    <string name="books_pick">选择</string>
+    <string name="mine_only">只推送「我的生词」</string>
+
+    <string name="books_title">选择要复习的词书</string>
+    <string name="books_ok">确定</string>
+    <string name="books_cancel">取消</string>
+    <string name="books_none">未选择词书</string>
+    <string name="books_need_one">至少选一本，已切回真题核心词</string>
+    <string name="books_sum_fmt">%1$s · 共 %2$d 词</string>
+
+    <string name="book_c4">真题核心词</string>
+    <string name="book_read">阅读难词</string>
+    <string name="book_freq">高频词汇</string>
+    <string name="book_rand">乱序全库</string>
+    <string name="book_c4_desc">四级真题卷面高频，513 词（录屏整理）</string>
+    <string name="book_read_desc">历年阅读原文里的生词，671 词</string>
+    <string name="book_freq_desc">考前速记，559 词</string>
+    <string name="book_rand_desc">四级词汇全表，4434 词（带音标）</string>
+    <string name="book_row_fmt">%1$s（%2$d 词）</string>
+
+    <string name="stat_fmt">今日 %1$d 次 · 词库 %2$d 词 · 连续 %3$d 天</string>
+    <string name="btn_test">立即测试一条通知</string>
+
+    <string name="last_title">上次提醒</string>
+    <string name="no_last">还没有提醒记录</string>
+    <string name="btn_speak">朗读</string>
+    <string name="btn_know">记住了</string>
+    <string name="btn_unknown">还不认识</string>
+    <string name="btn_library">浏览词库</string>
+
+    <!-- 词库 -->
+    <string name="library">词库</string>
+    <string name="search_hint">搜索单词或释义</string>
+    <string name="filter_all">全部</string>
+    <string name="filter_new">未学</string>
+    <string name="filter_hard">待攻克</string>
+    <string name="filter_fuzzy">待巩固</string>
+    <string name="filter_known">已掌握</string>
+    <string name="filter_mine">我的生词</string>
+    <string name="book_all">全部词书</string>
+    <string name="count_fmt">共 %1$d 个词</string>
+
+    <string name="need_usage">请先开启「使用情况访问」，否则无法判断你何时打开监控的应用</string>
+    <string name="need_notif">请先允许通知权限</string>
+    <string name="word_db_empty">词库是空的，取不到单词。请卸载重装，或告诉我</string>
+    <string name="started">监控已开启</string>
+    <string name="stopped">监控已关闭</string>
+
+    <!-- 诊断 -->
+    <string name="svc_active2_fmt">已进入监控应用 · 已提醒 %1$d 次</string>
+    <string name="diag_title">运行诊断</string>
+    <string name="diag_service">服务状态</string>
+    <string name="diag_running_fmt">运行中 · %1$d 秒前心跳</string>
+    <string name="diag_dead">未运行（被系统清理了）</string>
+    <string name="diag_pkg">当前前台</string>
+    <string name="diag_pkg_none">未识别到</string>
+    <string name="diag_in_yes">在监控列表内</string>
+    <string name="diag_in_no">不在监控列表</string>
+    <string name="diag_timer">距离下一条</string>
+    <string name="diag_remain_fmt">约 %1$d 秒</string>
+    <string name="diag_idle">未在监控应用，未计时</string>
+    <string name="diag_copy">复制诊断信息</string>
+    <string name="diag_copied">已复制，直接粘贴发给我</string>
+    <string name="diag_clear">清空日志</string>
+    <string name="btn_test_later">30 秒后弹一条（切到监控应用里等）</string>
+    <string name="test_later_done">已排定，30 秒后弹出，现在切到监控应用里别出来</string>
+    <string name="diag_service_line">服务状态：%1$s</string>
+    <string name="diag_pkg_line">当前前台：%1$s</string>
+    <string name="diag_pkg_state">当前前台：%1$s · %2$s</string>
+    <string name="diag_timer_line">距离下一条：%1$s</string>
+    <string name="sim_title">模拟在监控应用中（调试用）</string>
+    <string name="sim_hint">打开后会一直计时，用来单独验证「到点会不会弹」。关掉后恢复正常识别。</string>
+
+    <!-- 监控应用 -->
+    <string name="btn_apps_fmt">选择监控应用（已选 %1$d 个）</string>
+    <string name="apps_title">监控的应用</string>
+    <string name="apps_hint">勾选后，只有打开这些应用才会计时和提醒。默认已勾选几个常见短视频应用，可自行增删。</string>
+    <string name="apps_search">搜索应用名或包名</string>
+    <string name="apps_save">保存</string>
+    <string name="apps_save_fmt">保存（已选 %1$d 个）</string>
+    <string name="apps_saved">已保存</string>
+
+    <!-- 统计 -->
+    <string name="stats_title">推送统计</string>
+    <string name="btn_stats">统计</string>
+    <string name="stat_today">今日</string>
+    <string name="stat_total">累计</string>
+    <string name="stat_streak">连续</string>
+    <string name="stat_cover">覆盖词</string>
+    <string name="unit_times">次</string>
+    <string name="unit_days">天</string>
+    <string name="unit_words">词</string>
+
+    <string name="chart_week">最近 7 天</string>
+    <string name="chart_week_hint">每天推送了几条。空柱说明那天没打开监控应用，或监控没开。</string>
+
+    <string name="mastery_title">掌握进度</string>
+    <string name="mastery_fmt">待攻克 %1$d · 待巩固 %2$d · 已掌握 %3$d · 学习中 %4$d</string>
+    <string name="mastery_hint">连续 3 次「记住了」才算已掌握。第一次就点「还不认识」会进「我的生词」；先记住、后来又忘会进「待巩固」。</string>
+
+    <string name="hour_title">活跃时段</string>
+    <string name="hour_hint">0 点到 24 点各时段推送了多少条（仅统计本版之后的记录）。</string>
+    <string name="hour_peak_fmt">你最常在 %1$d 点到 %2$d 点用手机，共 %3$d 条。</string>
+    <string name="hour_none">记录还不够，多用几天就能看出你的作息。</string>
+
+    <string name="stubborn_title">总记不住的词</string>
+    <string name="stubborn_hint">被推 2 次以上还没标掌握 · 点一下朗读，长按标为已掌握</string>
+    <string name="stubborn_empty">暂时没有。推过的词你都标记掌握了。</string>
+    <string name="times_fmt">×%1$d</string>
+    <string name="marked_known">已标为掌握</string>
+
+    <string name="recent_title">最近推送</string>
+    <string name="recent_hint">只保留最近 90 天，最多显示 30 条。</string>
+    <string name="recent_empty">还没有推送记录。装好这一版之后弹出的每一条都会记在这里。</string>
+    <string name="today_label">今天</string>
+    <string name="yesterday_label">昨天</string>
+
+    <!-- 悬浮字外观 -->
+    <string name="style_title">悬浮字外观</string>
+    <string name="btn_style">外观</string>
+    <string name="style_preview">预览</string>
+    <string name="style_preview_hint">左＝深色画面，右＝浅色画面。两边都看得清才算调好。</string>
+    <string name="style_fg">字体颜色</string>
+    <string name="style_bg">背景</string>
+    <string name="style_bg_image">背景图片</string>
+    <string name="style_bg_none">未使用图片</string>
+    <string name="style_bg_set">已设为背景</string>
+    <string name="style_bg_pick">选择</string>
+    <string name="style_bg_remove">移除</string>
+    <string name="style_bg_picked">已设为背景</string>
+    <string name="style_bg_pick_fail">这张图读不出来，换一张试试</string>
+    <string name="style_bg_hint">有图片时优先用图片，下面的颜色只在不选图片时生效。不透明度对两者都管。</string>
+    <string name="style_img_adjust">调整图片（缩放 / 位置）</string>
+    <string name="crop_scale">缩放</string>
+    <string name="crop_x">左右</string>
+    <string name="crop_y">上下</string>
+    <string name="crop_hint">100% 是刚好铺满。放大后再用左右/上下把想露出的部分挪进框里。</string>
+
+    <string name="style_place">弹出的位置与时长</string>
+    <string name="style_pos">垂直位置</string>
+    <string name="style_pos_hint">2% 贴顶，88% 接近底部。越往上越不容易挡住应用底部的文案和按钮。</string>
+    <string name="style_size">大小</string>
+    <string name="style_size_hint">60%～200%，文字和卡片一起缩放。</string>
+    <string name="style_dismiss">自动消失</string>
+    <string name="style_dismiss_hint">1～12 秒自己拖。这段时间内没有任何操作就自动收起；拖到最左是不消失，只能手动点关闭。</string>
+    <string name="style_sec_fmt">%1$d 秒</string>
+    <string name="style_dismiss_never">不消失</string>
+    <string name="style_alpha_0">透明</string>
+    <string name="style_alpha_20">20%</string>
+    <string name="style_alpha_40">40%</string>
+    <string name="style_alpha_60">60%</string>
+    <string name="style_alpha_80">80%</string>
+    <string name="style_stroke">描边</string>
+    <string name="style_stroke_auto">自动</string>
+    <string name="style_stroke_black">黑边</string>
+    <string name="style_stroke_white">白边</string>
+    <string name="style_stroke_hint">描边是文字外面一圈实心边，不靠模糊阴影，所以浅色画面上也不会糊。</string>
+    <string name="style_scale">字号</string>
+    <string name="style_scale_s">小</string>
+    <string name="style_scale_m">标准</string>
+    <string name="style_scale_l">大</string>
+    <string name="style_scale_xl">特大</string>
+    <string name="style_preview_send">发一条看看真实效果</string>
+    <string name="style_preview_sent">已弹出一条，切到应用里看实际位置和大小</string>
+    <string name="style_reset">恢复默认</string>
+    <string name="style_reset_done">已恢复默认外观</string>
+    <string name="style_custom">自定义颜色…</string>
+    <string name="style_custom_fmt">自定义颜色…  %1$s</string>
+    <string name="color_hue">色相</string>
+    <string name="color_sat">鲜艳度</string>
+    <string name="color_val">明暗</string>
+    <string name="color_hex">色值（#RRGGBB）</string>
+    <string name="act_cancel">取消</string>
+    <string name="act_ok">确定</string>
+    <string name="style_preview_word">fraction</string>
+    <string name="style_preview_sub">n. 分数；小部分</string>
+
+    <!-- 推送记录 -->
+    <string name="history_title">推送记录</string>
+    <string name="btn_view_all">查看全部 ›</string>
+    <string name="history_empty">还没有推送记录</string>
+    <string name="history_days_fmt">最近 %1$d 天 · 共 %2$d 条</string>
+    <string name="history_day_fmt">%1$s · %2$d 条</string>
+
+    <string-array name="week_names">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+    <string name="list_tail">今天就到这吧，明天再来</string>
+    <string name="range_hint">拖动小龟筛选</string>
+    <string name="range_fmt">%1$d 词</string>
+    <string name="empty_title">龟龟也没找到这个词</string>
+    <string name="empty_hint">试试只输入词根，例如搜 band 找 abandon</string>
+    <string name="mate_day_fmt">龟龟已经陪你第 %1$d 天啦</string>
+    <string name="mate_today_fmt">今天背了 %1$d 个词，还有 %2$d 个一次就记住，厉害呀</string>
+    <string name="mate_streak_fmt">连续 %1$d 天 · 再来 %2$d 天就破纪录</string>
+    <string name="mate_history_fmt">龟龟今天喊了你 %1$d 次</string>
+    <string name="mate_history_hint">每条都记在这儿啦，点一下还能再听一遍</string>
+    <string name="history_tail">再往前翻就没有啦，龟龟都记着呢</string>
+    <string name="style_preview_title">预览</string>
+    <string name="style_bright">背景亮度</string>
+    <string name="style_bright_hint">卡片右下角的小龟只在不使用自定义背景图时出现</string>
+    <string name="books_dialog_title">选词书，龟龟照这个排</string>
+    <string name="books_dialog_sub">可多选，勾几本就背几本</string>
+    <string name="books_ok_fmt">就背这 %1$d 个</string>
+    <string name="mate_stats_sub">今天背了 %1$d 个词，已掌握 %2$d 个</string>
+    <string name="notice_title">用户须知</string>
+    <string name="notice_lead">这里会写清楚龟龟会看什么、不会看什么，以及你的数据都存在哪里。</string>
+    <string name="notice_placeholder">内容整理中。
+
+· 会读取：当前前台应用的包名（判断你是不是在用被监控的应用）
+· 不会读取：聊天内容、屏幕内容、输入内容
+· 数据保存在本机，不上传
+
+具体条款稍后补充。</string>
+    <string name="current_book">当前复习</string>
+    <string name="books_change">换词书</string>
+    <string name="today_label2">今日提醒</string>
+    <string name="streak_label2">连续天数</string>
+    <string name="known_label2">已掌握</string>
+
+    <string name="home_unit">次</string>
+    <string name="home_caption_idle">今天还没开始，打开开关让龟龟陪你</string>
+    <string name="home_caption_fmt">今天已经陪你记了 %1$d 个词</string>
+    <string name="home_head_fmt">%1$s · 第 %2$d 天</string>
+    <string name="home_on">龟龟在看</string>
+    <string name="home_off">龟龟在打盹</string>
+    <string name="home_due">待复习</string>
+    <string name="home_known">已掌握</string>
+    <string name="nav_library">词库</string>
+    <string name="nav_menu">菜单</string>
+    <string name="nav_stats">统计</string>
+    <string name="menu_title">菜单</string>
+    <string name="menu_library_sub">5 090 词 · 浏览、搜索、筛选</string>
+    <string name="menu_stats_sub">7 天趋势、掌握进度、活跃时段</string>
+    <string name="menu_history_sub">按天翻看每一条提醒</string>
+    <string name="menu_style_sub">颜色、位置、字号、背景</string>
+    <string name="menu_settings_sub">间隔、权限、监控应用、诊断</string>
+    <string name="menu_notice_sub">使用说明、免费声明、反馈方式</string>
+    <string name="menu_version">小龟过四级 v2.3</string>
+    <string name="settings_title">设置</string>
+    <string name="perm_required_hint">前 3 项必须开启，否则龟龟无法正常提醒你；后 3 项可选，开启后更稳定。</string>
+    <string name="home_perm_hint">还没开完权限，龟龟可能提醒不了你，去「菜单 → 设置」补齐</string>
+</resources>

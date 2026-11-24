@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 龟龟主题：海龟蓝绿 + 奶油米白 -->
+    <color name="primary">#2F7F86</color>
+    <color name="primary_dark">#1F5C62</color>
+    <color name="primary_container">#DFF0F1</color>
+    <color name="on_primary_container">#1F5C62</color>
+
+    <color name="surface">#FBF8F0</color>
+    <color name="surface_top">#DCF0EE</color>
+    <color name="card">#FFFFFF</color>
+    <color name="cream">#F6D9A0</color>
+
+    <color name="text">#22302E</color>
+    <color name="text_sub">#6E7C78</color>
+    <color name="divider">#EEE6D6</color>
+
+    <color name="st_new">#C3C4B4</color>
+    <color name="st_hard">#D9664D</color>
+    <color name="st_fuzzy">#DBA23A</color>
+    <color name="st_known">#2E8E8E</color>
+
+    <color name="icon_bg">#FFF8EA</color>
+</resources>

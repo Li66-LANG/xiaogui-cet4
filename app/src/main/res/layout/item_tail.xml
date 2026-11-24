@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="18dp"
+    android:paddingBottom="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_turtle"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/list_tail"
+        android:textColor="@color/text_sub"
+        android:textSize="11sp" />
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingTop="9dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="9dp">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_sub"
+        android:textSize="10sp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tvWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tvMeaning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_sub"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/vDot"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_marginLeft="8dp" />
+</LinearLayout>

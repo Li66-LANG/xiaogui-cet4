@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface"
+        app:title="@string/style_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="32dp">
+
+            <!-- 预览 -->
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/style_preview" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/panePreview"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:background="#14141A">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_turtle"
+                        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                    <LinearLayout
+                        android:id="@+id/boxPreviewDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <com.cet4.cards.OutlineTextView
+                            android:id="@+id/tvPreviewDark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.cet4.cards.OutlineTextView
+                            android:id="@+id/tvPreviewDarkSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
+                    android:background="#F2EEE6"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/boxPreviewLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <com.cet4.cards.OutlineTextView
+                            android:id="@+id/tvPreviewLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.cet4.cards.OutlineTextView
+                            android:id="@+id/tvPreviewLightSub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_mate_card"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingTop="10dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/style_bright"
+                        android:textColor="@color/text"
+                        android:textSize="12.5sp" />
+
+                    <TextView
+                        android:id="@+id/tvBrightVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="85%"
+                        android:textColor="@color/text_sub"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/sbBright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="85" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/style_bright_hint"
+                    android:textColor="@color/text_sub"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- 字体颜色 -->
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/style_fg" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="6dp">
+
+                    <GridLayout
+                        android:id="@+id/gridFg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="6"
+                        android:padding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFgCustom"
+                        style="@style/MiniButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/style_custom" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 背景 -->
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/style_bg" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingRight="14dp">
+
+                        <ImageView
+                            android:id="@+id/ivBgThumb"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:contentDescription="@string/style_bg_image"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/style_bg_image"
+                                android:textColor="@color/text"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvBgState"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/style_bg_none"
+                                android:textColor="@color/text_sub"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBgPick"
+                            style="@style/MiniButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style_bg_pick" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBgRemove"
+                            style="@style/MiniButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style_bg_remove"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnImgAdjust"
+                        style="@style/MiniButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/style_img_adjust"
+                        android:visibility="gone" />
+
+                    <GridLayout
+                        android:id="@+id/gridBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="6"
+                        android:padding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBgCustom"
+                        style="@style/MiniButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/style_custom" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipAlpha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        app:singleLine="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/a0"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_alpha_0" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/a20"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_alpha_20" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/a40"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_alpha_40" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/a60"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_alpha_60" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/a80"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_alpha_80" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/style_bg_hint"
+                        android:textColor="@color/text_sub"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 描边 -->
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/style_stroke" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipStroke"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="12dp"
+                        app:singleLine="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/sAuto"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_stroke_auto" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/sBlack"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_stroke_black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/sWhite"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/style_stroke_white" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/style_stroke_hint"
+                        android:textColor="@color/text_sub"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 位置与时长 -->
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/style_place" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/style_pos"
+                            android:textColor="@color/text"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvPosVal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbPos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:max="86" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/style_pos_hint"
+                        android:textColor="@color/text_sub"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/style_size"
+                            android:textColor="@color/text"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvSizeVal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/sbSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:max="140" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/style_size_hint"
+                        android:textColor="@color/text_sub"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/style_dismiss"
+                        android:textColor="@color/text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <SeekBar
+                            android:id="@+id/sbDismiss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="12" />
+
+                        <TextView
+                            android:id="@+id/tvDismissVal"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:textColor="@color/primary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/style_dismiss_hint"
+                        android:textColor="@color/text_sub"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPreview"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/style_preview_send" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/style_reset" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
